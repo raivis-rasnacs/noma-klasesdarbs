@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block lapas_saturs %}
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nosaukums</th>
+                    <th>Kategorija</th>
+                    <th>Raksturlielumi</th>
+                    <th>Pieejams/nepieejams</th>
+                    <th>Dienas cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produkts, kategorija in produkti %}
+                <tr>
+                    <td>{{ produkts.nosaukums }}</td>
+                    <td>{{ kategorija.nosaukums }}</td>
+                    <td>{{ produkts.teh_rakst }}</td>
+                    <td>
+                        {% if produkts.pieejams == True %}
+                        pieejams
+                        {% else %}
+                        nav pieejams
+                        {% endif %}
+                    </td>
+                    <td>{{ produkts.dienas_cena }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

@@ -6,11 +6,11 @@ class Nomnieks(db.Model):
 class Noma(db.Model):
     __table__ = db.Model.metadata.tables["Noma"]
 
-class Nomnieks(db.Model):
+class Kategorija(db.Model):
     __table__ = db.Model.metadata.tables["Kategorija"]
 
 class Produkts(db.Model):
     __table__ = db.Model.metadata.tables["Produkts"]
 
 class ProduktsNoma(db.Model):
-    __table__ = db.Model.metadata.tables["ProduktsNoma"]
+    __table__ = db.Model.metadata.tables["Produkts_Noma"]
